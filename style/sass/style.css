@@ -19,12 +19,11 @@
 .menu .mainMenu ol {
   display: flex;
   text-decoration: none;
-  background-color: red;
+  background-color: #ed1b24;
 }
 .menu li {
   text-decoration: none;
   padding: 2em;
-  background-color: red;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -168,4 +167,18 @@
   to {
     opacity: 1;
   }
+}
+.commentaires {
+  background-color: #f4f0f0;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  padding: 2em;
+}
+.commentaires p {
+  display: flex;
+  justify-content: center;
+}
+.commentaires form {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

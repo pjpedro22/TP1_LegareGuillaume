@@ -2,7 +2,7 @@ $largeur-container: 1200px;
 $red: #ed1b24;
 $black: #000000;
 $gray: #605656;
-$silver: #999393;
+$silver: #f4f0f0;
 
 // fonts:
 // font-family: 'Kumbh Sans', sans-serif;
@@ -29,12 +29,11 @@ $silver: #999393;
   .mainMenu ol {
     display: flex;
     text-decoration: none;
-    background-color: red;
+    background-color: $red;
   }
   li {
     text-decoration: none;
     padding: 2em;
-    background-color: red;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -91,7 +90,7 @@ $silver: #999393;
   .dropdown:hover .dropbtn {background-color: $gray;}
 
 
-
+// Caroussel -----------------------
 
 /* Hide the images by default */
 .mySlides {
@@ -170,4 +169,26 @@ $silver: #999393;
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+
+// Commenttaires ----------
+
+.commentaires {
+  background-color: $silver;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  padding: 2em;
+  
+
+  p {    
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+  }
 }
