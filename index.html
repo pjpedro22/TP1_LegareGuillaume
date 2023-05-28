@@ -4,23 +4,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style/css/style.css">
+  <link rel="stylesheet" href="./style/sass/style.css">
   <link rel="stylesheet" href="./style/css/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
   <title>TP1</title>
 </head>
 
 <body>
   <div class="container">
-    <header class="topMenu">
+    <header class="menu">
       <img class="logo" src="./img/MX-vs-ATV-Legends-Logo.webp" alt="">
 
       <nav class="mainMenu">
         <ol>
-          <li><a href="nosservices.html">menu 1</a></li>
-          <li><a href="nosforfaits.html">menu 2</a></li>
-          <li><a href="blogue.html">menu 3</a></li>
-          <li><a href="nousjoindre.html">menu 4</a></li>
+          <li>
+            <img src="./img/menu.png" alt="menu">
+            <div class="dropdown">
+              <button class="dropbtn">menu1</button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="./img/menu.png" alt="menu">
+            <a href="nosforfaits.html">menu 2</a>
+          </li>
+          <li>
+            <img src="./img/menu.png" alt="menu">
+            <a href="blogue.html">menu 3</a>
+          </li>
+          <li>
+            <img src="./img/menu.png" alt="menu">
+            <a href="nousjoindre.html">menu 4</a>
+          </li>
         </ol>
       </nav>
     </header>
