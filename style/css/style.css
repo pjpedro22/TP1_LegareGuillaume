@@ -215,7 +215,7 @@
   text-align: center;
 }
 .grid-container .grid-item-1 {
-  grid-rows: 2fr;
+  grid-rows: 3;
   grid-column: 1;
 }
 .grid-container .grid-item-2 {
