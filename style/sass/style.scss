@@ -50,46 +50,6 @@ $silver: #f4f0f0;
 }
 
 
-
-// drop down --------------------
-
-
-.dropbtn {
-  background-color: #fff;
-  color: $black;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  // .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: $gray;}
-
-
 // Caroussel -----------------------
 
 /* Hide the images by default */
@@ -105,7 +65,7 @@ $silver: #f4f0f0;
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: $red;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -116,6 +76,7 @@ $silver: #f4f0f0;
 /* Position the "next button" to the right */
 .next {
   right: 0;
+  margin-right: 25.5em;
   border-radius: 3px 0 0 3px;
 }
 
@@ -149,7 +110,7 @@ $silver: #f4f0f0;
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 2em 0 1em 1em;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -172,19 +133,20 @@ $silver: #f4f0f0;
 }
 
 
-// Commenttaires ----------
+// Commentaires ----------
 
 .commentaires {
   background-color: $silver;
   margin-top: 4em;
   margin-bottom: 4em;
   padding: 2em;
-  
 
   p {    
-    display: flex;
-    justify-content: center;
-    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    width: 50%;
+    text-align: center;
   }
 
   form {
@@ -192,3 +154,60 @@ $silver: #f4f0f0;
     justify-content: center;
   }
 }
+
+.textInput {
+  padding: .8em;
+  font-size: 1.2em;
+}
+
+.bouton {
+  background-color: $gray;
+  padding: 1em 2.2em 1em 2.2em;
+  border-radius: .8em;
+  margin-left: 2em;
+  font-size: 1.2em;
+  color: $silver;
+}
+
+// Signature ----------
+
+.signature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .bouton {
+    margin-left: 4em;
+  }
+}
+
+// Section flexbox ---------
+
+.sectionFlexbox {
+  text-align: center;
+
+  h2 {
+    font-size: 3em;
+  }
+  h3 {
+    font-size: 1.6em;
+  }
+  p {
+    font-size: 1.4em;
+    margin-bottom: 2.8em;
+  }
+
+  .flexbox {
+    display: flex;
+
+    .card {
+      margin: .2em;
+
+      img {
+        border-radius: 100%;
+      }
+    }
+  }
+}
+
+

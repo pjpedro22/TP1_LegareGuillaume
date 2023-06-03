@@ -1,14 +1,38 @@
-* {box-sizing:border-box}
-
-topMenu {
-  display: flex;
+* {
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+.menu .logo {
+  width: 200px;
+}
+.menu .mainMenu ol {
+  display: flex;
+  text-decoration: none;
+  background-color: #ed1b24;
+}
+.menu li {
+  text-decoration: none;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.menu a {
+  color: #000000;
+  font-size: 1.4em;
+  margin-left: 0.4em;
 }
 
 /* Hide the images by default */
@@ -24,23 +48,27 @@ topMenu {
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: #ed1b24;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
+  margin-right: 25.5em;
   border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -68,7 +96,7 @@ topMenu {
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 2em 0 1em 1em;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -81,30 +109,89 @@ topMenu {
 
 /* Fading animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.commentaires {
+  background-color: #f4f0f0;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  padding: 2em;
+}
+.commentaires p {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  width: 50%;
+  text-align: center;
+}
+.commentaires form {
+  display: flex;
+  justify-content: center;
 }
 
-.piechart {
-  margin-top: 300px;
-  display: block;
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background-image: conic-gradient(
-      pink 70deg, 
-      lightblue 0 235deg, 
-      orange 0);
+.textInput {
+  padding: 0.8em;
+  font-size: 1.2em;
 }
 
-.stats {
+.bouton {
+  background-color: #605656;
+  padding: 1em 2.2em 1em 2.2em;
+  border-radius: 0.8em;
+  margin-left: 2em;
+  font-size: 1.2em;
+  color: #f4f0f0;
+}
+
+.signature {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.signature .bouton {
+  margin-left: 4em;
+}
+
+.sectionFlexbox {
+  text-align: center;
+}
+.sectionFlexbox h2 {
+  font-size: 3em;
+}
+.sectionFlexbox h3 {
+  font-size: 1.6em;
+}
+.sectionFlexbox p {
+  font-size: 1.4em;
+  margin-bottom: 2.8em;
+}
+.sectionFlexbox .flexbox {
+  display: flex;
+}
+.sectionFlexbox .flexbox .card {
+  margin: 0.2em;
+}
+.sectionFlexbox .flexbox .card img {
+  border-radius: 100%;
 }
