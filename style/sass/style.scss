@@ -16,6 +16,7 @@ $silver: #f4f0f0;
   width: 90%;
   max-width: $largeur-container;
 	margin: 0 auto;
+  background-color: lightgreen;
 }
 
 .menu {
@@ -215,9 +216,11 @@ $silver: #f4f0f0;
 
 .grid-container {
   display: grid;
+  justify-content: center;
   grid-template-rows: repeat(8, 100px);
   grid-template-columns: repeat(14, 100px);
   grid-gap: 10px;
+  background-color: pink;
   .grid-item {
     overflow: hidden;
     background-color: #717171;
@@ -245,7 +248,7 @@ $silver: #f4f0f0;
     grid-column: 10 / 12;
   }
   .grid-item-6 {
-    grid-row: 4 / 6;
+    grid-row: 4 / 7;
     grid-column: 12 / 14;
   }
 }
