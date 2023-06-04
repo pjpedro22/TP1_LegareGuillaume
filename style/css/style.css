@@ -62,7 +62,6 @@
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  margin-right: 25.5em;
   border-radius: 3px 0 0 3px;
 }
 
@@ -215,7 +214,7 @@
   text-align: center;
 }
 .grid-container .grid-item-1 {
-  grid-rows: 3;
+  grid-rows: 1/3;
   grid-column: 1;
 }
 .grid-container .grid-item-2 {
@@ -223,18 +222,152 @@
   grid-column: 2;
 }
 .grid-container .grid-item-3 {
-  grid-rows: 2;
-  grid-column: 3;
+  grid-rows: 3;
+  grid-column: 2;
 }
 .grid-container .grid-item-4 {
   grid-rows: 4;
-  grid-column: 4;
+  grid-column: 2;
 }
 .grid-container .grid-item-5 {
   grid-rows: 1;
-  grid-column: 5;
+  grid-column: 3;
 }
 .grid-container .grid-item-6 {
   grid-rows: 2;
-  grid-column: 5;
+  grid-column: 3;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.stats h3 {
+  font-size: 2em;
+}
+.stats .right {
+  margin-left: 2em;
+}
+.stats .stats--container {
+  display: flex;
+}
+.stats .stats__num {
+  font-size: 2.5em;
+  margin-right: 1em;
+}
+.stats .bouton {
+  text-decoration: none;
+}
+
+.team {
+  text-align: center;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+.team h5 {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+.team p {
+  font-size: 1.2em;
+}
+.team .team--display {
+  display: flex;
+  text-align: start;
+}
+.team .team--display .icon {
+  width: 1.8em;
+}
+
+.map {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.map iframe {
+  width: 100%;
+  height: 62vh;
+  position: relative;
+}
+.map .map__form {
+  background-color: #f4f0f0;
+  position: absolute;
+  height: 42vh;
+  border-radius: 1.2em;
+  padding: 1.8em;
+  margin-right: 0.8em;
+}
+.map .map__form .margin--right {
+  margin-right: 1em;
+}
+.map .map__form .margin--top {
+  margin-top: 1em;
+}
+.map .map__form h6 {
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.map .map__form p {
+  font-size: 1.3em;
+}
+.map .map__form .name {
+  display: flex;
+}
+.map .map__form input {
+  width: 100%;
+  height: 2em;
+}
+.map .map__form .midWidth {
+  width: 50%;
+}
+.map .map__form .message {
+  height: 6em;
+}
+.map .map__form .boutonMargin {
+  margin-top: 2em;
+}
+.map .map__form .bouton {
+  margin-left: 0;
+}
+
+.bottomMenu {
+  text-align: center;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+.bottomMenu img {
+  width: 20%;
+}
+.bottomMenu .bottomMenu__nav {
+  display: flex;
+  justify-content: center;
+}
+.bottomMenu li {
+  list-style-type: none;
+}
+.bottomMenu a {
+  text-decoration: none;
+  color: #000000;
+  margin: 1em;
+  font-size: 1.5em;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+.footer .right--footer {
+  display: flex;
+}
+.footer .right--footer img {
+  margin-left: 1em;
+}
+.footer .right--footer p {
+  margin-left: 1em;
 }
