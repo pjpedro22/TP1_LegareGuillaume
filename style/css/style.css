@@ -199,10 +199,10 @@
 .grid-container {
   display: grid;
   justify-content: center;
-  grid-template-rows: repeat(8, 100px);
-  grid-template-columns: repeat(14, 100px);
+  grid-template-rows: repeat(8, 80px);
+  grid-template-columns: repeat(14, 80px);
   grid-gap: 10px;
-  background-color: pink;
+  margin-left: 5.5em;
 }
 .grid-container .grid-item {
   overflow: hidden;
@@ -273,6 +273,8 @@
 .team .team--display {
   display: flex;
   text-align: start;
+  margin-left: 4em;
+  margin-right: 2em;
 }
 .team .team--display .icon {
   width: 1.8em;

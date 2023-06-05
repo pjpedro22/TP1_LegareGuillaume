@@ -217,10 +217,11 @@ $silver: #f4f0f0;
 .grid-container {
   display: grid;
   justify-content: center;
-  grid-template-rows: repeat(8, 100px);
-  grid-template-columns: repeat(14, 100px);
+  grid-template-rows: repeat(8, 80px);
+  grid-template-columns: repeat(14, 80px);
   grid-gap: 10px;
-  background-color: pink;
+  margin-left: 5.5em;
+  // background-color: pink;
   .grid-item {
     overflow: hidden;
     background-color: #717171;
@@ -294,6 +295,8 @@ $silver: #f4f0f0;
   .team--display {
     display: flex;
     text-align: start;
+    margin-left: 4em;
+    margin-right: 2em;
     .icon {
       width: 1.8em;
     }
