@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <link rel="stylesheet" href="./style/css/style.css">
   <link rel="stylesheet" href="./style/css/normalize.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
   <div class="container">
     <header class="menu">
       <img class="logo" src="./img/mx-logo.png" alt="Logo">
-      <nav class="mainMenu">
+      <nav class="menu__navbar">
         <ol>
           <li>
             <img class="menu__icon" src="./img/menu.png" alt="menu">
@@ -39,10 +39,11 @@
           </li>
         </ol>
       </nav>
+      <svg class="menu__hamburger" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
     </header>
 
-    <body>
-      <div class="container">
+    <main>
+      <div class="carousel">
         <div class="mySlides fade">
           <img src="./img/img1.jpg" style="width:100%" alt="Motorcycle">
         </div>
@@ -73,16 +74,16 @@
         <p>
           Découvrez les nouveaux DLC et nouveau contenu téléchargeable tel que les skins pour les pilotes ainsi que les pièces et decals des véhicules. 
         </p>
-        <form action="">
-          <input class="textInput" type="text" name="" id="" placeholder="example@gmail.com">
-          <input class="bouton" type="submit" value="Envoyer">
+        <form class="commentaires__form" action="confirmation.html">
+          <input class="textInput" type="text" name="email" id="email" placeholder="example@gmail.com">
+          <input class="bouton commentaires__btn" type="submit" value="Envoyer">
         </form>
       </div>
       
       <div class="signature">
         <img src="./img/autograph.png" alt="autograph">
-        <form action="">
-          <input class="bouton" type="submit" value="Envoyer">
+        <form class='signature__form' action="confirmation.html">
+          <input class="bouton signature__btn" type="submit" value="Envoyer">
         </form>
       </div>
 
@@ -92,21 +93,21 @@
         </p>
         <div class="flexbox">
           <div class="card">
-            <img src="./img/icon1.png" alt="icon">
+            <img class="card__icon" src="./img/icon1.png" alt="icon">
             <h3>Physique</h3>
             <p>
               Ressentez le système physique raffiné pour une course de plus grande précision, même dans les situations les plus difficiles comme les bermes et les ornières
             </p>
           </div>
           <div class="card">
-            <img src="./img/icon2.png" alt="icon">
+            <img class="card__icon" src="./img/icon2.png" alt="icon">
             <h3>Trail</h3>
             <p>
               Découvrez le tout nouveau mode Trails pour les courses en plein air à haute intensité, chaque virage peut présenter de nouvelles surprises, défiant votre style de conduite de nouvelles façons.
             </p>
           </div>
           <div class="card">
-            <img src="./img/icon3.png" alt="icon">
+            <img class="card__icon" src="./img/icon3.png" alt="icon">
             <h3>Carrière</h3>
             <p>
               Participez au nouveau mode carrière où vos choix mènent à différents chemins, opportunités de parrainage et événements spéciaux sur invitation.
@@ -125,17 +126,16 @@
         <div class="grid-item grid-item-6"><img src="./img/img4.jpg" alt="Motorcycle"></div>
       </div>
 
-      <div class="stats">
+      <div class="stats-section">
         <div class="pie">
           <img src="./img/tp-pie-chart.png" alt="Pie Chart">
         </div>
-        <div class="piechart"></div>
         <div class="right">
           <h3>Des statistiques</h3>
           <p>
             Les joueurs vivent le fantasme de devenir un pilote tout-terrain professionnel de renommée mondiale. Ils profiteront de la gloire et de l'adulation des fans et des sponsors tout en jouant aux modes carrière et en ligne.
           </p>
-          <div class="stats--container">
+          <div class="stats">
             <div class="stats__num">
               <h4>44M</h4>
               <p>Copies venduent</p>
@@ -145,65 +145,79 @@
               <p>Contenu téléchargé chaque jour.</p>
             </div>
           </div>
-          <div class="btnContainer">
-            <a href="index.html" class="bouton">Voir plus</a>
-          </div>
+            <a href="index.html" class="bouton stats__bouton">Voir plus</a>
         </div>
       </div>
       
-      <div class="team">
+      <div class="team-section">
         <h5>Notre équipe</h5>
         <p>
           MX vs ATV Legends est le dernier opus de l'univers des courses tout-terrain MX vs ATV.
         </p>
-        <div class="team--display">
+        <div class="team">
           <div class="team__card">
-            <img src="./img/avatar1.png" alt="avatar">
-            <h4>Alexe Bodapest</h4>
-            <h5>Game Design</h5>
+            <div class="card--small">
+              <img class="card__avatar" src="./img/avatar1.png" alt="avatar">
+              <div class="card__header">
+                <h4>Alexe Bodapest</h4>
+                <h5>Game Design</h5>
+              </div>
+            </div>
             <p>
               Les concepteurs de jeux développent des idées d'histoires, des mondes et des graphiques qui détaillent la progression des utilisateurs dans le jeu.
             </p>
-            <div class="card--icons">
+            <div class="card__icons">
               <a href="https://www.facebook.com"><img class="icon" src="./img/facebook.png" alt="facebook icon"></a>
               <a href="https://www.twitter.com"><img class="icon" src="./img/twitter.png" alt="twitter icon"></a>
               <a href="https://www.instagram.com"><img class="icon" src="./img/instagram.png" alt="instagram icon"></a>
             </div>
           </div>
           <div class="team__card">
-            <img src="./img/avatar2.png" alt="avatar">
-            <h4>Nancy Pelozi</h4>
-            <h5>Programmeur</h5>
+            <div class="card--small">
+              <img class="card__avatar" src="./img/avatar2.png" alt="avatar">
+              <div class="card__header">
+                <h4>Nancy Pelozi</h4>
+                <h5>Programmeur</h5>
+              </div>
+            </div>
             <p>
               Le rôle du programmeur consiste à assembler les plates-formes et les moteurs qui alimenteront les jeux, ainsi que d'écrire du code pour des logiciels personnalisés afin de prendre en charge les exigences uniques des jeux.
             </p>
-            <div class="card--icons">
+            <div class="card__icons">
               <a href="https://www.facebook.com"><img class="icon" src="./img/facebook.png" alt="facebook icon"></a>
               <a href="https://www.twitter.com"><img class="icon" src="./img/twitter.png" alt="twitter icon"></a>
               <a href="https://www.instagram.com"><img class="icon" src="./img/instagram.png" alt="instagram icon"></a>
             </div>
           </div>
           <div class="team__card">
-            <img src="./img/avatar3.png" alt="avatar">
-            <h4>Emma Solace</h4>
-            <h5>Background Artist</h5>
+            <div class="card--small">
+              <img class="card__avatar" src="./img/avatar3.png" alt="avatar">
+              <div class="card__header"> 
+                <h4>Emma Solace</h4>
+                <h5>Background Artist</h5>
+              </div>
+            </div>
             <p>
               Les artistes de fond font partie de l'équipe qui se spécialise dans le dessin des éléments de l'histoire autres que les personnages. Ces derniers vont travailler pour préparer le terrain pour l'histoire.
             </p>
-            <div class="card--icons">
+            <div class="card__icons">
               <a href="https://www.facebook.com"><img class="icon" src="./img/facebook.png" alt="facebook icon"></a>
               <a href="https://www.twitter.com"><img class="icon" src="./img/twitter.png" alt="twitter icon"></a>
               <a href="https://www.instagram.com"><img class="icon" src="./img/instagram.png" alt="instagram icon"></a>
             </div>
           </div>
           <div class="team__card">
-            <img src="./img/avatar4.png" alt="avatar">
-            <h4>Zack Bardot</h4>
-            <h5>Character Artist</h5>
+            <div class="card--small">
+              <img class="card__avatar" src="./img/avatar4.png" alt="avatar">
+              <div class="card__header">
+                <h4>Zack Bardot</h4>
+                <h5>Character Artist</h5>
+              </div>
+            </div>
             <p>
               Les character artist créent et dessinent les éléments visuels d'un jeu tels que les personnages, les véhicules, les armes et autres accessoires.
             </p>
-            <div class="card--icons">
+            <div class="card__icons">
               <a href="https://www.facebook.com"><img class="icon" src="./img/facebook.png" alt="facebook icon"></a>
               <a href="https://www.twitter.com"><img class="icon" src="./img/twitter.png" alt="twitter icon"></a>
               <a href="https://www.instagram.com"><img class="icon" src="./img/instagram.png" alt="instagram icon"></a>
@@ -218,40 +232,35 @@
           <form>
             <h6>Candidature Spontanée</h6>
             <p>Passionné de jeux vidéo? Joignez-vous à notre équipe!</p>
-            <!-- <label for="fname">First name:</label><br> -->
             <div class="name">
-              <input class="midWidth margin--right" type="text" id="fname" name="fname" placeholder="Nom de famille"><br>
-              <!-- <label for="lname">Last name:</label><br> -->
+              <input class="midWidth margin--right" type="text" id="fname" name="fname" placeholder="Nom de famille">
               <input class="midWidth" type="text" id="lname" name="lname" placeholder="Prénom">
             </div>
             <input class="margin--top" type="text" id="email" name="email" placeholder="Email">
             <input class="message margin--top" type="text" id="message" name="message" placeholder="message">
           </form> 
-          <p class="boutonMargin"><a href="index.html" class="bouton">Submit</a></p>
-          
+          <div class="form__btn">
+            <a href="index.html" class="bouton">Submit</a>
+          </div>
         </div>
       </div>
-  </div>
+  
 
       <div class="bottomMenu">
-        <div class="logo--container">
-          <img class="logo" src="./img/MX-vs-ATV-Legends-Logo.webp" alt="logo">
-        </div>
+          <img class="logo logo_footer" src="./img/MX-vs-ATV-Legends-Logo.webp" alt="logo">
         <nav >
           <ol class="bottomMenu__nav">
-            <li><a href="index.html">About us</a></li>
-            <li><a href="index.html">Features</a></li>
-            <li><a href="index.html">Pricing</a></li>
-            <li><a href="index.html">Career</a></li>
-            <li><a href="index.html">FAQs</a></li>
-            <li><a href="index.html">Privacy policy</a></li>
+            <li><a class="bottomMenu__link" href="index.html">About us</a></li>
+            <li><a class="bottomMenu__link" href="index.html">Features</a></li>
+            <li><a class="bottomMenu__link" href="index.html">Pricing</a></li>
+            <li><a class="bottomMenu__link" href="index.html">Career</a></li>
+            <li><a class="bottomMenu__link" href="index.html">FAQs</a></li>
+            <li><a class="bottomMenu__link" href="index.html">Privacy policy</a></li>
           </ol>
         </nav>
       </div>
+    </main>
 
-    </body>
-
-  <div class="container">
     <footer class="footer">
       <div class="left"><p>Fait par: Guillaume Legare</p></div>
       <div class="center">
@@ -262,15 +271,14 @@
           <a href="https://www.instagram.com/"><img class="icons" src="./img/instagram.png" alt="instagram icon"></a>
         </div>
       </div>
-      <div class="right--footer">
+      <div class="footer--right">
         <img class="icons" src="./img/phone.png" alt="phone">
         <a href="tel:1-888-234-5432">1-888-234-5432</a>
         <img class="icons" src="./img/mail.png" alt="email">
         <a href="mailto: cegep@troisriviere.ca">cegep@troisriviere.ca</a>
       </div>
     </footer>
-  </div>  
     
-  
+  </div>
 </body>
 </html>
