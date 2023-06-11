@@ -31,30 +31,30 @@ function showSlides(n) {
 
 const validateForm = () => {
 
-  const lastName = document.getElementById('lastName');
-  const firstName = document.getElementById('firstName');
+  const username = document.getElementById('username');
+  const username2 = document.getElementById('username2');
   const email = document.getElementById('email');
 
-  const lastNameValue = lastName.value.trim();
-  const firstNameValue = firstName.value.trim();
+  const usernameValue = username.value.trim();
+  const usernameValue2 = username2.value.trim();
   const emailValue = email.value.trim();
 
   let noError = true;
 
-  //Validation du lastname
-  if(lastNameValue === '') {
-      setError(lastName, 'Le nom ne peut pas être vide');
+  //Validation du Username
+  if(usernameValue === '') {
+      setError(username, 'Le nom ne peut pas être vide');
       noError = false;
   } else {
-      setSuccess(lastName);
+      setSuccess(username);
   }
 
-  //Validation du firstname
-  if(firstNameValue === '') {
-      setError(firstName, 'Le prénom ne peut pas être vide');
+  //Validation du Username2
+  if(usernameValue2 === '') {
+      setError(username2, 'Le nom ne peut pas être vide');
       noError = false;
   } else {
-      setSuccess(firstName);
+      setSuccess(username2);
   }
 
   //Validation du email

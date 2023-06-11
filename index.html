@@ -57,8 +57,6 @@
         </div>
       </div>  
 
-      
-
       <!-- Next and previous buttons -->
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -70,14 +68,14 @@
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
 
-      <div class="commentaires">
+      <div class="dlc">
         <p>
           Découvrez les nouveaux DLC et nouveau contenu téléchargeable tel que les skins pour les pilotes ainsi que les pièces et decals des véhicules. 
         </p>
-        <form class="commentaires__form" action="confirmation.html">
-          <input class="textInput" type="text" name="email" id="email" placeholder="example@gmail.com">
-          <input class="bouton commentaires__btn" type="submit" value="Envoyer">
-        </form>
+        <div class="dlc__form">
+          <input class="dlc__input" placeholder="example@gmail.com">
+          <input class="bouton commentaires__btn" value="Envoyer">
+        </div>
       </div>
       
       <div class="signature">
@@ -145,7 +143,7 @@
               <p>Contenu téléchargé chaque jour.</p>
             </div>
           </div>
-            <a href="index.html" class="bouton stats__bouton">Voir plus</a>
+          <a href="index.html" class="bouton stats__bouton">Voir plus</a>
         </div>
       </div>
       
@@ -160,10 +158,10 @@
               <img class="card__avatar" src="./img/avatar1.png" alt="avatar">
               <div class="card__header">
                 <h4>Alexe Bodapest</h4>
-                <h5>Game Design</h5>
+                <h6>Game Design</h6>
               </div>
             </div>
-            <p>
+            <p class="card__p">
               Les concepteurs de jeux développent des idées d'histoires, des mondes et des graphiques qui détaillent la progression des utilisateurs dans le jeu.
             </p>
             <div class="card__icons">
@@ -177,10 +175,10 @@
               <img class="card__avatar" src="./img/avatar2.png" alt="avatar">
               <div class="card__header">
                 <h4>Nancy Pelozi</h4>
-                <h5>Programmeur</h5>
+                <h6>Programmeur</h6>
               </div>
             </div>
-            <p>
+            <p class="card__p">
               Le rôle du programmeur consiste à assembler les plates-formes et les moteurs qui alimenteront les jeux, ainsi que d'écrire du code pour des logiciels personnalisés afin de prendre en charge les exigences uniques des jeux.
             </p>
             <div class="card__icons">
@@ -194,10 +192,10 @@
               <img class="card__avatar" src="./img/avatar3.png" alt="avatar">
               <div class="card__header"> 
                 <h4>Emma Solace</h4>
-                <h5>Background Artist</h5>
+                <h6>Background Artist</h6>
               </div>
             </div>
-            <p>
+            <p class="card__p">
               Les artistes de fond font partie de l'équipe qui se spécialise dans le dessin des éléments de l'histoire autres que les personnages. Ces derniers vont travailler pour préparer le terrain pour l'histoire.
             </p>
             <div class="card__icons">
@@ -211,10 +209,10 @@
               <img class="card__avatar" src="./img/avatar4.png" alt="avatar">
               <div class="card__header">
                 <h4>Zack Bardot</h4>
-                <h5>Character Artist</h5>
+                <h6>Character Artist</h6>
               </div>
             </div>
-            <p>
+            <p class="card__p">
               Les character artist créent et dessinent les éléments visuels d'un jeu tels que les personnages, les véhicules, les armes et autres accessoires.
             </p>
             <div class="card__icons">
@@ -229,43 +227,40 @@
       <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d348934.58105959295!2d-73.54642529199155!3d46.90170722741776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc42d22e3ef7e4f%3A0xd1f9b3092e6c7df6!2sRivi%C3%A8re%20Matawin!5e0!3m2!1sfr!2sca!4v1685286962474!5m2!1sfr!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="map__form">
+          <h6>Candidature Spontanée</h6>
+            
+          <p>Passionné de jeux vidéo? Joignez-vous à notre équipe!</p>
           
-          <form action="confirmation.html" method="post" onsubmit="return validateForm()" novalidate>
-            
-            <h6>Candidature Spontanée</h6>
-            
-            <p>Passionné de jeux vidéo? Joignez-vous à notre équipe!</p>
-            
-            <div class="name">
-              
-              <div class="input-control">
-                <label for="lastName"></label>
-                <input class="midWidth margin--right" type="text" id="lastName" name="lastName" placeholder="Nom de famille">
-                <div class="errorMessage"></div>
-              </div>
-              
-              <div class="input-control">
-                <label for="firstName"></label>
-                <input class="midWidth" type="text" id="firstName" name="firstName" placeholder="Prénom">
-                <div class="errorMessage"></div>
-              </div>
-            </div>
-            
+          <form id="form" action="/" method="post" onsubmit="return validateForm()">
+
             <div class="input-control">
-              <label for="email"></label>
-              <input class="margin--top" type="text" id="email" name="email" placeholder="Email">
+              <label for="username"></label>
+              <input id="username" name="username" type="text" placeholder="username">
               <div class="errorMessage"></div>
             </div>
-            
+          
+            <div class="input-control">
+              <label for="username2"></label>
+              <input id="username2" name="username2" type="text" placeholder="username2">
+              <div class="errorMessage"></div>
+            </div>
+      
+            <div class="input-control">
+              <label for="email"></label>
+              <input id="email" name="email" type="text" placeholder="email">
+              <div class="errorMessage"></div>
+            </div>
+  
             <div class="input-control">
               <label for="message"></label>
-              <input class="message margin--top" type="text" id="message" name="message" placeholder="message">
+              <input id="message" name="message" type="text" placeholder="message">
+              <div class="errorMessage"></div>
             </div>
-            
-            <div class="form__btn">
-              <input class="bouton" type="submit" value="Submit">
-            </div>
-          </form> 
+          
+            <input class="button" type="submit" value="Submit">
+
+          </form>
+
         </div>
       </div>
   
@@ -299,7 +294,7 @@
         <img class="icons" src="./img/phone.png" alt="phone">
         <a href="tel:1-888-234-5432">1-888-234-5432</a>
         <img class="icons" src="./img/mail.png" alt="email">
-        <a href="mailto: cegep@troisriviere.ca">cegep@troisriviere.ca</a>
+        <a href="mailto:cegep@troisriviere.ca">cegep@troisriviere.ca</a>
       </div>
     </footer>
     

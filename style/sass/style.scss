@@ -125,9 +125,9 @@ body {
 }
 
 
-// Commentaires ----------
+// Dlc ----------
 
-.commentaires {
+.dlc {
   background-color: $silver;
   margin-top: 4em;
   margin-bottom: 4em;
@@ -141,9 +141,19 @@ body {
     text-align: center;
   }
 
-  form {
+  .dlc__form {
     display: flex;
     justify-content: center;
+  }
+
+  .dlc__input {
+    padding: .8em;
+  }
+
+  .bouton {
+    @include myButton($silver, .8em);
+    color: $black;
+    text-align: center;
   }
 }
 
@@ -257,8 +267,9 @@ body {
     font-size: 2.5em;
     margin-right: 1em;
   }
-  .stats-bouton {
-    margin-top: 4em;
+  .stats__bouton {
+    position: absolute;
+    margin-top: 2em;
   }
   .bouton {
     text-decoration: none;
@@ -273,12 +284,11 @@ body {
   margin-bottom: 4em;
   h5 {
     font-size: 2em;
-    margin: 0;
-    padding-right: 2em;
-    margin-bottom: 0;
+    margin: 1em;
   }
   p {
     font-size: 1.2em;
+    margin: 1em;
   }
   .team {
     display: flex;
@@ -288,12 +298,20 @@ body {
       width: 1.8em;
       margin-right: .8em;
     }
+    h6 {
+      font-size: 2em;
+      margin-top: .8em;
+      margin-bottom: .8em;
+    }
     .team__card {
       flex-direction: column;
       @include myCard($silver);
       width: 23%;
       padding: .8em 2em .8em 2em; 
       border-radius: .8em;
+      .card__p {
+        margin: 0;
+      }
       .card__icons {
         display: flex;
         align-items: flex-end;
@@ -623,6 +641,9 @@ body {
       .stats {
         margin-top: 2em;
         margin-left: 2em;
+      }
+      .stats__bouton {
+        margin-bottom: 3em;
       }
     }
     .team-section {
