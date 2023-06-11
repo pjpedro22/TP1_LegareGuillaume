@@ -1,10 +1,3 @@
-const form = document.getElementById('job');
-const lastName = document.getElementById('lname');
-const firstName = document.getElementById('fname');
-const email = document.getElementById('email');
-const message = document.getElementById('message');
-
-
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -34,64 +27,74 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-//validation
+//validation ----------------------------------------
 
 const validateForm = () => {
-  let noError = true;
-  const lastnameValue = lastName.value.trim();
-  const firstnameValue = firstName.value.trim();
+
+  const lastName = document.getElementById('lastName');
+  const firstName = document.getElementById('firstName');
+  const email = document.getElementById('email');
+
+  const lastNameValue = lastName.value.trim();
+  const firstNameValue = firstName.value.trim();
   const emailValue = email.value.trim();
-  const messageValue = message.value.trim();
-  console.log('validateForm!')
 
-  if (lastnameValue === '') {
-    setError(lastName, 'Lastname is required');
-    noError = false;
+  let noError = true;
+
+  //Validation du lastname
+  if(lastNameValue === '') {
+      setError(lastName, 'Le nom ne peut pas être vide');
+      noError = false;
   } else {
-    setSuccess(lastName);
-  }
-  
-  if (firstnameValue === '') {
-    setError(firstName, 'Firstname is required');
-    noError = false;
-  } else {
-    setSuccess(firstName);
+      setSuccess(lastName);
   }
 
-  if (emailValue === '') {
-    setError(email, 'Email is required');
-    noError = false;
-  } else if (!validateEmail(emailValue)) {
-    setError(email, 'Provide a valid email address');
-    noError = false
+  //Validation du firstname
+  if(firstNameValue === '') {
+      setError(firstName, 'Le prénom ne peut pas être vide');
+      noError = false;
   } else {
-    setSuccess(email);
+      setSuccess(firstName);
   }
 
+  //Validation du email
+  if(emailValue === ''){
+      setError(email,'Email ne peut être vide');
+      noError = false;
+  }
+  else if(!validateEmail(emailValue)){
+      setError(email,'Entrez une adresse courriel valide');
+      noError = false;
+  }
+  else{
+      setSuccess(email);
+  }
+
+  console.log(noError);
   return noError;
 }
 
 const validateEmail = (email) => {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+  
   return re.test(String(email).toLowerCase());
 }
 
-const setError = (element, message) => {
+const setError = (element, message) => { 
   const inputControl = element.parentElement;
-  const errorDisplay = inputControl.querrySelector('errorMessage');
+  const errorDisplay = inputControl.querySelector('.errorMessage');
 
   errorDisplay.innerText = message;
   inputControl.classList.add('error');
   inputControl.classList.remove('success');
 }
 
-const setSuccess = element => {
+const setSuccess = (element) => {
   const inputControl = element.parentElement;
-  const errorDisplay = inputControl.querrySelector('errorMessage');
+  const errorDisplay = inputControl.querySelector('.errorMessage');
 
   errorDisplay.innerText = '';
-  inputControl.classList.add('success');
   inputControl.classList.remove('error');
+  inputControl.classList.add('success');
 }
 
