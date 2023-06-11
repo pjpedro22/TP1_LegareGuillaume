@@ -1,19 +1,6 @@
-$largeur-container: 1200px;
-$red: rgba(253,29,29,1);
-$black: #000000;
-$gray: #605656;
-$silver: rgba(244, 240, 240, 0.5);
-$silver2: rgb(244, 240, 240);
-$purple: rgb(202,60,255);
-$purple2: rgba(202,60,255,1);
-$yellow: rgba(252,176,69,1);
-$large-width: 1080px;
-$medium-width: 960px;
-$small-width: 480px;
-$font: 'Kumbh Sans', sans-serif;
-$font-size: 2em;
-$margin: 2em;
-
+@import 'variables';
+@import 'button';
+@import 'mixins';
 
 * {
   box-sizing: border-box;
@@ -21,11 +8,11 @@ $margin: 2em;
   padding: 0;
 }
 
-// body {
-//   background: $purple;
-//   background: radial-gradient(circle, $purple2 23%, $red 75%, $yellow 100%);
-//   font-family: $font;
-// }
+body {
+  background: $purple;
+  background: radial-gradient(circle, $purple2 23%, $red 75%, $yellow 100%);
+  font-family: $font;
+}
 
 .container {
   width: 90%;
@@ -164,15 +151,6 @@ $margin: 2em;
   font-size: 1.2em;
 }
 
-.bouton {
-  background-color: $gray;
-  padding: .8em 1.2em .8em 1.2em;
-  border-radius: .6em;
-  margin-left: 2em;
-  font-size: 1.2em;
-  color: white;
-}
-
 // Signature ----------
 
 .signature {
@@ -180,7 +158,8 @@ $margin: 2em;
   justify-content: center;
   align-items: center;
 
-  .bouton {
+  .signature__btn {
+    @extend .bouton;
     margin-left: 4em;
   }
 }
@@ -310,7 +289,7 @@ $margin: 2em;
     }
     .team__card {
       flex-direction: column;
-      background-color: $silver;
+      @include myCard($silver);
       width: 23%;
       padding: .8em 2em .8em 2em; 
       border-radius: .8em;
@@ -357,6 +336,8 @@ $margin: 2em;
     }
     p{
       font-size: .8em;
+      margin-top: 1em;
+      margin-bottom: 1em;
     }
     .name {
       display: flex;
@@ -364,9 +345,21 @@ $margin: 2em;
     input {
       width: 100%;
       height: 2em;
+      outline: 0;
+    }
+    .input-control.success {
+      border-color: $success;
+    }
+    .input-control.error {
+      border-color: $success;
+    }
+    .input-control .errorMessage {
+      color: $error;
+      font-size: 9px;
+      height: 13px;
     }
     .midWidth {
-      width: 50%;
+      width: 90%;
     }
     .message {
       height: 6em;
@@ -440,15 +433,14 @@ $margin: 2em;
   }
 }
 
-@media screen and (min-width: 1080px) {
-  body {
-		background-color: red;
-	}
-}
+// @media screen and (min-width: 1080px) {
+//   body {
+// 		background-color: red;
+// 	}
+// }
 
 @media screen and (min-width: 960px) and (max-width: 1080px) {
 	body{
-		background-color: green;
     .grid-container {
       display: flex;
       flex-direction: column;
@@ -519,9 +511,8 @@ $margin: 2em;
 	}
 }
 
-@media screen and (min-width: 570px) and (max-width: 960px) {
+@media screen and (min-width: 500px) and (max-width: 960px) {
 	body{
-		background-color: purple;
     .container {
       width: 100%;
       max-width: $largeur-container;

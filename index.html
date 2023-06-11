@@ -229,19 +229,31 @@
       <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d348934.58105959295!2d-73.54642529199155!3d46.90170722741776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc42d22e3ef7e4f%3A0xd1f9b3092e6c7df6!2sRivi%C3%A8re%20Matawin!5e0!3m2!1sfr!2sca!4v1685286962474!5m2!1sfr!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="map__form">
-          <form>
+          <form id="job" action="confirmation.html" onsubmit="return validateForm()">
             <h6>Candidature Spontanée</h6>
             <p>Passionné de jeux vidéo? Joignez-vous à notre équipe!</p>
             <div class="name">
-              <input class="midWidth margin--right" type="text" id="fname" name="fname" placeholder="Nom de famille">
-              <input class="midWidth" type="text" id="lname" name="lname" placeholder="Prénom">
+              <div class="input-control">
+                <label for="nom"></label>
+                <input class="midWidth margin--right" type="text" id="lname" name="nom" placeholder="Nom de famille">
+              </div>
+              <div class="input-control">
+                <label for="prenom"></label>
+                <input class="midWidth" type="text" id="fname" name="prenom" placeholder="Prénom">
+              </div>
             </div>
-            <input class="margin--top" type="text" id="email" name="email" placeholder="Email">
-            <input class="message margin--top" type="text" id="message" name="message" placeholder="message">
+            <div class="input-control">
+              <label for="email"></label>
+              <input class="margin--top" type="text" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="input-control">
+              <label for="message"></label>
+              <input class="message margin--top" type="text" id="message" name="message" placeholder="message">
+            </div>
+            <div class="form__btn">
+              <input class="bouton" type="submit" value="Submit">
+            </div>
           </form> 
-          <div class="form__btn">
-            <a href="index.html" class="bouton">Submit</a>
-          </div>
         </div>
       </div>
   
