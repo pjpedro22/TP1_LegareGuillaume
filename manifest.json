@@ -1,0 +1,19 @@
+{
+  "name": "Mx vs Atv",
+  "short_name": "MvA",
+  "icons": [{
+    "src": "/img/mx-logo.png",
+    "sizes": "300x62",
+    "type": "image/png",
+    "purpose" : "maskable"
+  }, {
+    "src": "/img/MX-vs-ATV-Legends-Logo.webp",
+    "sizes": "1000x208",
+    "type": "image/webp",
+    "purpose" : "maskable"
+  }],
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "000000",
+  "theme_color": "##605656"
+}
