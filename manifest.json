@@ -7,9 +7,14 @@
     "type": "image/jpeg",
     "purpose" : "maskable"
   }, {
-    "src": "./img/MX-vs-ATV-Legends-Logo.webp",
+    "src": "./img/logo512.jpg",
     "sizes": "512x512",
-    "type": "image/webp",
+    "type": "image/jpg",
+    "purpose" : "maskable"
+  }, {
+    "src": "./img/logo144.jpg",
+    "sizes": "144x144",
+    "type": "image/jpeg",
     "purpose" : "maskable"
   }],
   "start_url": "index.html",
