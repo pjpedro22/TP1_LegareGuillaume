@@ -7,14 +7,14 @@
     "type": "image/jpeg",
     "purpose" : "maskable"
   }, {
-    "src": "./img/logo512.jpg",
+    "src": "./img/logo512.png",
     "sizes": "512x512",
-    "type": "image/jpg",
+    "type": "image/png",
     "purpose" : "maskable"
   }, {
-    "src": "./img/logo144.jpg",
+    "src": "./img/logo144.png",
     "sizes": "144x144",
-    "type": "image/jpg",
+    "type": "image/png",
     "purpose" : "maskable"
   }],
   "start_url": "index.html",
